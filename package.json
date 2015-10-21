@@ -9,6 +9,7 @@
     "build": "gulp build",
     "lint": "eslint --ignore-path .gitignore *.js",
     "serve": "node server.js",
-    "start": "npm run build && npm run serve"
+    "start": "npm run build && npm run serve",
+    "verify": "npm run lint"
   }
 }
