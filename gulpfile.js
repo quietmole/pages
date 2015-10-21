@@ -9,9 +9,12 @@ var targets = [
 gulp.task('build', function() {
   var options = {};
   targets.forEach(function(target) {
+    var compiled = bookmarkleter(fs.readFileSync(target + '.js'), {mangleVars: true, anonymize: true});
+    var forCopy = bookmarkleter('window.prompt("built javascript", "' + compiled + '")', {mangleVars: true, anonymize: true});
     options[target] = {
-      src: bookmarkleter(fs.readFileSync(target + '.js'), {mangleVars: true, anonymize: true}),
-      tpl: '<a href="%s">' + target.replace(/-/g, ' ') + '</a>'
+      src: [[compiled, forCopy]],
+      tpl: '<a href="%s">' + target.replace(/-/g, ' ') +
+      '</a> / <a href="%s">copy javascript</a>'
     };
   });
   gulp.src('./template/*.html')
