@@ -1,8 +1,15 @@
 {
   "devDependencies": {
-    "express": "^4.13.3"
+    "eslint": "^1.7.2",
+    "express": "^4.13.3",
+    "gulp": "^3.9.0",
+    "gulp-html-replace": "^1.5.4"
   },
   "scripts": {
-    "start": "node server.js"
+    "build": "gulp build",
+    "lint": "eslint --ignore-path .gitignore *.js",
+    "serve": "node server.js",
+    "start": "npm run build && npm run serve",
+    "verify": "npm run lint"
   }
 }
