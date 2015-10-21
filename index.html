@@ -9,8 +9,7 @@
 
 Create plain link from selected text or current page title.
 
-<a href="javascript:(
-function(w) {
+<a href="javascript:(function(w) {
   var s = ('getSelection' in window ? window : document).getSelection().toString();
   var t = w.document.title;
   var u = w.location.href;
@@ -19,6 +18,7 @@ function(w) {
   r.push(u);
   w.prompt('created link', r.join(' '));
   void 0;
-})(window);">create link plain</a>
+})(window);
+">create link plain</a>
 </body>
 </html>
