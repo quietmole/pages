@@ -5,6 +5,9 @@
 </head>
 <body>
 <h1>Bookmarklet of quietmole</h1>
+
+Bookmarklet for Safari and Chrome.
+
 <h3>Create link plain</h3>
 
 Create plain link from selected text or current page title.<br />
@@ -12,5 +15,31 @@ Create plain link from selected text or current page title.<br />
 
 <!-- build:create-link-plain -->
 <!-- endbuild -->
+
+<h2>About browser</h2>
+
+A web site which uses CSP (Content Security Policy) blocks bookmarklet on Firefox.
+
+<h3>Bookmarklet without an external script</h3>
+
+<code>javascript:()(function(){window.alert('foo');})</code>
+
+<ul>
+  <li>chrome 46: alert 'foo'</li>
+  <li>firefox 42: bookmarklet does not work</li>
+  <li>ios 8 safari: alert 'foo'</li>
+  <li>android 5.1 chrome: alert 'foo'</li>
+  <li>android 5.1 firefox 41: bookmarklet does not work</li>
+</ul>
+
+<h3>Bookmarklet with an external script</h3>
+
+<ul>
+  <li>chrome 46: bookmarklet does not read an external script because of csp violation</li>
+  <li>firefox 42: bookmarklet does not work</li>
+</ul>
+
+<a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP">CSP (Content Security Policy) - Web security | MDN</a>
+
 </body>
 </html>
