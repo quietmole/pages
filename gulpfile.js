@@ -3,7 +3,8 @@ var htmlReplace = require('gulp-html-replace');
 var fs = require('fs');
 var bookmarkleter = require('bookmarkleter');
 var targets = [
-  'create-link-plain'
+  'create-link-plain',
+  'create-link-markdown'
 ];
 
 gulp.task('build', function() {
