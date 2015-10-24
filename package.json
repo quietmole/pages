@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "bookmarkleter": "^0.2.2",
+    "bookmarkletter": "^0.1.1",
     "eslint": "^1.7.2",
     "express": "^4.13.3",
     "gulp": "^3.9.0",
