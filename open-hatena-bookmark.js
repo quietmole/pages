@@ -17,12 +17,22 @@ function browserCanonicalUrl () {
 }
 
 var targetUrl = browserCanonicalUrl() || location.href;
-/**
- *
- * @see http://b.hatena.ne.jp/help/entry/api
- */
-var entryUrl = 'http://b.hatena.ne.jp/entry/' + targetUrl.replace(/#/g, '%23');
+if(window.XDomainRequest){
+  /**
+   * @see http://b.hatena.ne.jp/help/entry/api
+   */
+  var entryUrl = 'http://b.hatena.ne.jp/entry/' + targetUrl.replace(/#/g, '%23');
 
-if (window.confirm('Open hatena bookmark page? ' + entryUrl)) {
-  window.open(entryUrl, null);
+  if (window.confirm('Open hatena bookmark page? ' + entryUrl)) {
+    window.open(entryUrl, null);
+  }
+} else {
+  /**
+   * @see http://b.hatena.ne.jp/help/entry/api
+   */
+  var entryUrl = 'http://b.hatena.ne.jp/entry/' + targetUrl.replace(/#/g, '%23');
+
+  if (window.confirm('Open hatena bookmark page? ' + entryUrl)) {
+    window.open(entryUrl, null);
+  }
 }
