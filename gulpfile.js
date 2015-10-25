@@ -5,7 +5,8 @@ var bookmarkleter = require('bookmarkleter');
 var targets = [
   'create-link-plain',
   'create-link-markdown',
-  'create-link-html'
+  'create-link-html',
+  'open-hatena-bookmark'
 ];
 
 gulp.task('build', function() {
