@@ -4,7 +4,8 @@
     "eslint": "^1.7.2",
     "express": "^4.13.3",
     "gulp": "^3.9.0",
-    "gulp-html-replace": "^1.5.4"
+    "gulp-html-replace": "^1.5.4",
+    "lodash.escape": "^3.0.0"
   },
   "scripts": {
     "build": "gulp build",
