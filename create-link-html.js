@@ -36,14 +36,13 @@ function getSelectedText() {
   var txt = '';
   if (window.getSelection) {
     txt = window.getSelection().toString();
-  }
-  else if (document.getSelection) {
+  } else if (document.getSelection) {
     txt = document.getSelection().toString();
-  }
-  else if (document.selection) {
+  } else if (document.selection) {
     txt = document.selection.createRange().text;
+  } else {
+    return;
   }
-  else return;
   return txt;
 }
 
