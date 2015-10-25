@@ -41,7 +41,7 @@ function getSelectedText() {
   } else if (document.selection) {
     txt = document.selection.createRange().text;
   } else {
-    return;
+    return null;
   }
   return txt;
 }
