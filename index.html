@@ -7,7 +7,7 @@
 <body>
 <h1>Bookmarklet of quietmole</h1>
 
-Bookmarklet for Safari and Chrome.
+Bookmarklet for IE (&gt;= 8), Safari and Chrome.
 
 
 <h3>Create link plain</h3>
@@ -41,7 +41,16 @@ Open hatena bookmark entry page.<br />
 <a href="javascript:void%20function(){function%20n(){for(var%20n=document.getElementsByTagName(%22link%22),e=n.length,o=0;e%3Eo;o++)if(n[o].rel%26%26%22canonical%22===n[o].rel.toLowerCase())return%20n[o].href;return%20null}var%20e=n()||location.href,o=%22http://b.hatena.ne.jp/entry/%22+e.replace(/%23/g,%22%2523%22);window.confirm(%22Open%20hatena%20bookmark%20page%3F%20%22+o)%26%26window.open(o,null)}();">open hatena bookmark</a> / <a href="javascript:void%20function(){window.prompt(%22built%20javascript%22,%22javascript:void%2520function(){function%2520n(){for(var%2520n=document.getElementsByTagName(%2522link%2522),e=n.length,o=0;e%253Eo;o++)if(n[o].rel%2526%2526%2522canonical%2522===n[o].rel.toLowerCase())return%2520n[o].href;return%2520null}var%2520e=n()||location.href,o=%2522http://b.hatena.ne.jp/entry/%2522+e.replace(/%2523/g,%2522%252523%2522);window.confirm(%2522Open%2520hatena%2520bookmark%2520page%253F%2520%2522+o)%2526%2526window.open(o,null)}();%22)}();">copy javascript</a>
 
 
-<h2>About browser</h2>
+<h2>Support browsers</h2>
+
+<ul>
+  <li>IE (&gt;= 8)</li>
+  <li>Safari (desktop, mobile)</li>
+  <li>Chrome (desktop, mobile)</li>
+</ul>
+
+
+<h2>About CSP</h2>
 
 A web site which uses CSP (Content Security Policy) blocks bookmarklet on Firefox.
 
